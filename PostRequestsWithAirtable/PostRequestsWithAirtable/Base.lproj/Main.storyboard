@@ -193,11 +193,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClientListCell" rowHeight="126" id="Pi3-vw-iTr" customClass="ClientListCell" customModule="PostRequestsWithAirtable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="126"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClientListCell" rowHeight="130" id="Pi3-vw-iTr" customClass="ClientListCell" customModule="PostRequestsWithAirtable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pi3-vw-iTr" id="gbJ-mo-zkG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRp-a0-6w3">
@@ -227,7 +227,6 @@
                                             <outlet property="about" destination="NoB-4m-R7d" id="kr9-ZB-zXm"/>
                                             <outlet property="logo" destination="fRp-a0-6w3" id="DTA-3A-HQJ"/>
                                             <outlet property="name" destination="PrH-2e-y9l" id="dbh-hj-iwN"/>
-                                            <segue destination="ghv-3g-QkJ" kind="show" id="ndR-47-WbN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -242,7 +241,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H1B-y4-lzu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qlg-pM-b7P"/>
+                    <navigationItem key="navigationItem" id="Qlg-pM-b7P">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O3N-9V-6JP">
+                            <connections>
+                                <segue destination="ghv-3g-QkJ" kind="show" id="Qls-Pw-8R6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="clientListTableView" destination="tY1-Al-3qS" id="dzA-Kk-Omf"/>
                     </connections>

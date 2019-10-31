@@ -14,21 +14,20 @@ class ClientListCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var about: UILabel!
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
-    private func configurateCell(type: Clients) {
-        
-        self.name.text = type.fields.Name
-        
+    func configurateCell(type: Clients) {
+        self.name.text = type.fields.name
+        self.name.numberOfLines = 0
+        self.about.text = type.fields.about
+        ImageHelper.shared.getImage(urlStr: type.fields.logo?[0].url ?? "") { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let image):
+                    self.logo.image = image
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
 }

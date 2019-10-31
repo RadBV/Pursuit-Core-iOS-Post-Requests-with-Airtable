@@ -9,35 +9,30 @@
 import Foundation
 
 struct ClientWrapper: Codable {
-    let fields: [Clients]
+    let records: [Clients]
 }
 
 struct Clients: Codable {
     let fields: Fields
-}
-
-struct Fields: Codable {
-    let Name: String
-    let About: String
-    let Logo: [Logo]?
     
     static func getClients(from jsonData: Data) throws -> [Clients] {
         let response = try JSONDecoder().decode(ClientWrapper.self, from: jsonData)
-        return response.fields
+        return response.records
     }
 }
 
-
-//Wrappers
+struct Fields: Codable {
+    let name: String?
+    let about: String?
+    let logo: [Logo]?
+    
+    enum CodingKeys: String, CodingKey {
+        case about = "About"
+        case name = "Name"
+        case logo = "Logo"
+    }
+}
 
 struct Logo: Codable {
-    let thumbnails: Thumbnails
-}
-
-struct Thumbnails: Codable {
-    let large: Large
-}
-
-struct Large: Codable {
-    let url: String
+    let url: String?
 }

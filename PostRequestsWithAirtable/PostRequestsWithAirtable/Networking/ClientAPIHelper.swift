@@ -26,10 +26,10 @@ class ClientAPIHelper {
                 completionHandler(.failure(appError))
             case .success(let data):
                 do {
-                    let ClientData = try JSONDecoder().decode(ClientWrapper.self, from: data)
-                    completionHandler(.success(ClientData.fields))
+                    let ClientData = try Clients.getClients(from: data)
+                    completionHandler(.success(ClientData))
                 } catch {
-                    completionHandler(.failure(AppError.badStatusCode))
+                    completionHandler(.failure(.couldNotParseJSON(rawError: error)))
                 }
             }
         }
