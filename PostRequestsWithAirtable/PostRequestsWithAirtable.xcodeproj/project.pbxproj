@@ -12,6 +12,7 @@
 		1D5434E9236AF9B7005937E0 /* ClientAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5434E8236AF9B7005937E0 /* ClientAPIHelper.swift */; };
 		1D5434ED236B0212005937E0 /* ClientListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5434EC236B0212005937E0 /* ClientListCell.swift */; };
 		1D5434EF236B0385005937E0 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5434EE236B0385005937E0 /* ImageHelper.swift */; };
+		1D5434F3236B426A005937E0 /* CreateClientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5434F2236B426A005937E0 /* CreateClientsVC.swift */; };
 		1D557AE223679A2B003E201F /* ClientListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D557AE123679A2B003E201F /* ClientListVC.swift */; };
 		CD01CDB42326B70F002D0255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CDB32326B70F002D0255 /* AppDelegate.swift */; };
 		CD01CDB62326B70F002D0255 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CDB52326B70F002D0255 /* ProjectsViewController.swift */; };
@@ -45,6 +46,7 @@
 		1D5434E8236AF9B7005937E0 /* ClientAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPIHelper.swift; sourceTree = "<group>"; };
 		1D5434EC236B0212005937E0 /* ClientListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListCell.swift; sourceTree = "<group>"; };
 		1D5434EE236B0385005937E0 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		1D5434F2236B426A005937E0 /* CreateClientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientsVC.swift; sourceTree = "<group>"; };
 		1D557AE123679A2B003E201F /* ClientListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientListVC.swift; path = "../../../../labs/unit-3/postRequest/PostRequestsWithAirtable/PostRequestsWithAirtable/View Controllers/ClientListVC.swift"; sourceTree = "<group>"; };
 		CD01CDB02326B70F002D0255 /* PostRequestsWithAirtable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostRequestsWithAirtable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01CDB32326B70F002D0255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				CD01CDB52326B70F002D0255 /* ProjectsViewController.swift */,
 				CDEB5DFE2326DCB900DE505F /* CreateProjectViewController.swift */,
 				1D5434EC236B0212005937E0 /* ClientListCell.swift */,
+				1D5434F2236B426A005937E0 /* CreateClientsVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				1D5434E9236AF9B7005937E0 /* ClientAPIHelper.swift in Sources */,
 				CDEB5DF62326C62200DE505F /* AppError.swift in Sources */,
 				1D5434E3236AF0CF005937E0 /* Secrets.swift in Sources */,
+				1D5434F3236B426A005937E0 /* CreateClientsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

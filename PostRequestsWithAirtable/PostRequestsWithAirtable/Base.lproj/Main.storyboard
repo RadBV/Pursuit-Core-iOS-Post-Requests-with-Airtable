@@ -273,23 +273,23 @@
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="851.78571428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Create ClientsVC-->
         <scene sceneID="iSI-K7-6ID">
             <objects>
-                <viewController id="ghv-3g-QkJ" sceneMemberID="viewController">
+                <viewController id="ghv-3g-QkJ" customClass="CreateClientsVC" customModule="PostRequestsWithAirtable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W9r-SB-3pW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e00-wa-D8X">
-                                <rect key="frame" x="86" y="286" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e00-wa-D8X">
+                                <rect key="frame" x="86" y="286" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bte-Fk-w57">
-                                <rect key="frame" x="86" y="339" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bte-Fk-w57">
+                                <rect key="frame" x="86" y="339" width="47" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -307,7 +307,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN5-be-u2d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create new project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN5-be-u2d">
                                 <rect key="frame" x="86" y="207" width="242" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -317,16 +317,23 @@
                                 <rect key="frame" x="184" y="410" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createClient:" destination="ghv-3g-QkJ" eventType="touchUpInside" id="V4r-K3-aSL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vN5-be-u2d" firstAttribute="centerX" secondItem="nHs-Uj-Xel" secondAttribute="centerX" id="5im-l5-vjG"/>
-                            <constraint firstItem="vN5-be-u2d" firstAttribute="top" secondItem="nHs-Uj-Xel" secondAttribute="top" constant="119" id="wl4-Hd-fDN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHs-Uj-Xel"/>
                     </view>
                     <navigationItem key="navigationItem" id="gx9-LB-lRg"/>
+                    <connections>
+                        <outlet property="aboutTextField" destination="oYh-WC-Zqj" id="U1R-QH-0fc"/>
+                        <outlet property="createButton" destination="OLn-jI-gnv" id="wYv-44-wfi"/>
+                        <outlet property="nameTextField" destination="f5q-xi-Ewq" id="AjU-Ov-Ole"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0a-nt-Fle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
