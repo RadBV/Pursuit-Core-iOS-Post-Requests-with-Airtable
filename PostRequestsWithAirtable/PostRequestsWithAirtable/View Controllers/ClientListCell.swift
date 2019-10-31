@@ -17,9 +17,15 @@ class ClientListCell: UITableViewCell {
     
     func configurateCell(type: Clients) {
         self.name.text = type.fields.name
-        self.name.numberOfLines = 0
         self.about.text = type.fields.about
-        ImageHelper.shared.getImage(urlStr: type.fields.logo?[0].url ?? "") { (result) in
+        self.name.numberOfLines = 0
+        self.about.numberOfLines = 0
+//        guard let url = type.fields.logo?.url else {
+//            fatalError("something went wrong with the picture :(")
+//        }
+        print(type.fields.logo?[0].url)
+        let image = type.fields.logo
+        ImageHelper.shared.getImage(urlStr: image?[0].url ?? "") { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let image):

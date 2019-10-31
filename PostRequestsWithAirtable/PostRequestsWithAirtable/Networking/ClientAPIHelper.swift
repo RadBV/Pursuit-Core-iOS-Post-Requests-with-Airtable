@@ -12,7 +12,7 @@ class ClientAPIHelper {
     private init() {}
     static let shared = ClientAPIHelper()
     private var airtableURL: URL {
-        guard let url = URL(string: "https://api.airtable.com/v0/" + Secrets.AirtableProject + "/Design%20projects?typecast=true&&api_key=" + Secrets.AirtableAPIKey) else {
+        guard let url = URL(string: "https://api.airtable.com/v0/" + Secrets.AirtableProject + "/Clients?view=All%20clients&api_key=" + Secrets.AirtableAPIKey) else {
             fatalError("Error: Invalid URL")
         }
         return url
