@@ -193,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClientListVC" rowHeight="126" id="Pi3-vw-iTr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClientListCell" rowHeight="126" id="Pi3-vw-iTr" customClass="ClientListCell" customModule="PostRequestsWithAirtable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pi3-vw-iTr" id="gbJ-mo-zkG">
@@ -224,6 +224,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="about" destination="NoB-4m-R7d" id="kr9-ZB-zXm"/>
+                                            <outlet property="logo" destination="fRp-a0-6w3" id="DTA-3A-HQJ"/>
+                                            <outlet property="name" destination="PrH-2e-y9l" id="dbh-hj-iwN"/>
                                             <segue destination="ghv-3g-QkJ" kind="show" id="ndR-47-WbN"/>
                                         </connections>
                                     </tableViewCell>

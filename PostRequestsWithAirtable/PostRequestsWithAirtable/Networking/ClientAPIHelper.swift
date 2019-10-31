@@ -18,7 +18,7 @@ class ClientAPIHelper {
         return url
     }
     
-    func getClients(id: Int, completionHandler: @escaping (Result<[Clients],AppError>) -> Void ) {
+    func getClients(completionHandler: @escaping (Result<[Clients],AppError>) -> Void ) {
         
         NetworkHelper.manager.performDataTask(withUrl: airtableURL, andMethod: .get) { (result) in
             switch result {
