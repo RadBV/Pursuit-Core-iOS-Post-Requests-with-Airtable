@@ -14,8 +14,8 @@ struct ClientWrapper: Codable {
 
 struct Clients: Codable {
     let fields: Fields
-    
 }
+
 struct Fields: Codable {
     let Name: String
     let About: String
